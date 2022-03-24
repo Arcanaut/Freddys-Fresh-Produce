@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className='home'>
         <section className='home-header'>
-            <h1 id="home">Project 3</h1>
+            <h1 id="home">Group Project 3</h1>
             <p>Shelby <br />
                 Bo <br />
                 Brendan <br />
