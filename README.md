@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 An app to view and discuss property listings.
 
 
@@ -19,3 +20,6 @@ WHEN I click add new listing
 THEN I can add a title, picture, address, description, and submit the listing
 WHEN I view the listing as the creator I can edit or delete it
 
+=======
+# Rent-Me
+>>>>>>> 62d16944fb0047f7f2e8bc94ac3c5f51ccf614ae
