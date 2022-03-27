@@ -12,6 +12,8 @@ import { setContext } from '@apollo/client/link/context';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
+import ItemExampleLink from './components/PostList';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,18 +38,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <MainPage></MainPage>
-        <div className="container">
-          <Switch>
-          </Switch>
-        </div>
-        <Footer />
-      </div>
-    </Router>
-  </ApolloProvider>
+      <Router>
+        {/* <div className="flex-column justify-flex-start min-100-vh"> */}
+          <Header />
+          <MainPage></MainPage>
+          <ItemExampleLink></ItemExampleLink>
+          {/* <div className="container">*/}
+            <Switch>
+            </Switch> 
+          {/* </div> */}
+          <Footer />
+        {/* </div> */}
+      </Router>
+    </ApolloProvider>
   );
 }
 
