@@ -18,6 +18,17 @@
   box-sizing: border-box;
 }
 
+.main-page {
+  background-image: url('./background.jpeg');
+  background-color: #cccccc;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
 html,
 body {
   min-height: 100%;
@@ -32,6 +43,7 @@ body {
   font-size: 20px;
   color: var(--dark);
   background-color: #f3fffee1;
+
 }
 
 h1,

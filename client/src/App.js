@@ -11,6 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
+import MainPage from './components/MainPage';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,9 +39,9 @@ function App() {
     <Router>
       <div className="flex-column justify-flex-start min-100-vh">
         <Header />
+        <MainPage></MainPage>
         <div className="container">
           <Switch>
-          
           </Switch>
         </div>
         <Footer />
