@@ -8,9 +8,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
-          .populate('thoughts')
-          .populate('friends');
-
+          .populate('posts')
         return userData;
       }
 
@@ -60,7 +58,7 @@ const resolvers = {
     },
     addPost: async (parent, args, context) => {
       if (context.user) {
-        const thought = await Post.create({ ...args, username: context.user.username });
+        const post = await Post.create({ ...args, username: context.user.username });
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -73,9 +71,9 @@ const resolvers = {
 
       throw new AuthenticationError('You need to be logged in!');
     },
-    addReaction: async (parent, { thoughtId, reactionBody }, context) => {
+    addReaction: async (parent, { postId, reactionBody }, context) => {
       if (context.user) {
-        const updatedThought = await Post.findOneAndUpdate(
+        const updatedPost = await Post.findOneAndUpdate(
           { _id: postId },
           { $push: { reactions: { reactionBody, username: context.user.username } } },
           { new: true, runValidators: true }

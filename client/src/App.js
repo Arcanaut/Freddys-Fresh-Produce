@@ -17,6 +17,7 @@ import PostList from './components/PostList';
 
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Profile from './pages/Profile';
 
 
 const httpLink = createHttpLink({
@@ -53,8 +54,8 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/postlist" component={PostList} />
-              {/* <Route exact path="/profile/:username?" component={Profile} />
-              <Route exact path="/thought/:id" component={SingleThought} />
+              <Route exact path="/profile/:username?" component={Profile} />
+              {/* <Route exact path="/post/:id" component={SinglePost} />
 
               <Route component={NoMatch} /> */}
             </Switch>
