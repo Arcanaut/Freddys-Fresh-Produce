@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node config/seeds.js"
+    "seed": "node seeders/seeds.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "mongoose": "^5.9.7"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0",
     "nodemon": "^2.0.2"
   }
 }
