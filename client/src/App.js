@@ -12,7 +12,7 @@ import { setContext } from '@apollo/client/link/context';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
-import ItemExampleLink from './components/PostList';
+import PostList from './components/PostList';
 
 
 import Login from './pages/Login';
@@ -46,12 +46,13 @@ function App() {
         {/* <div className="flex-column justify-flex-start min-100-vh"> */}
           <Header />
           <MainPage></MainPage>
-          <ItemExampleLink></ItemExampleLink>
+          {/* <ItemExampleLink></ItemExampleLink> */}
           <div className="container">
             <Switch>
               {/* <Route exact path="/" component={Home} /> */}
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
+              <Route exact path="/postlist" component={PostList} />
               {/* <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/thought/:id" component={SingleThought} />
 

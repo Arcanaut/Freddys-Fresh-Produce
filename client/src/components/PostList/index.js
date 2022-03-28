@@ -3,7 +3,7 @@ import { Image, Item } from 'semantic-ui-react'
 
 const paragraph = <Image src='/images/wireframe/short-paragraph.png' />
 
-const ItemExampleLink = () => (
+const PostList = () => (
   <Item.Group>
     <Item>
       <Item.Image size='tiny' src='/images/wireframe/image.png' />
@@ -35,4 +35,4 @@ const ItemExampleLink = () => (
   </Item.Group>
 )
 
-export default ItemExampleLink;
+export default PostList;
