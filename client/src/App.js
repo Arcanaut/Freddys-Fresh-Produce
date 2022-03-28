@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,6 +13,10 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
 import ItemExampleLink from './components/PostList';
+
+
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 const httpLink = createHttpLink({
@@ -43,10 +47,17 @@ function App() {
           <Header />
           <MainPage></MainPage>
           <ItemExampleLink></ItemExampleLink>
-          {/* <div className="container">*/}
+          <div className="container">
             <Switch>
-            </Switch> 
-          {/* </div> */}
+              {/* <Route exact path="/" component={Home} /> */}
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              {/* <Route exact path="/profile/:username?" component={Profile} />
+              <Route exact path="/thought/:id" component={SingleThought} />
+
+              <Route component={NoMatch} /> */}
+            </Switch>
+          </div>
           <Footer />
         {/* </div> */}
       </Router>
