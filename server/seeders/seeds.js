@@ -46,11 +46,11 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.insertedCount);
     const { username } = userData[randomUserIndex];
 
-    const randomThoughtIndex = Math.floor(Math.random() * createdUsers.insertedCount);
-    const { _id: thoughtId } = createdThoughts[randomThoughtIndex];
+    const randomPostIndex = Math.floor(Math.random() * createdUsers.insertedCount);
+    const { _id: PosttId } = createdPosts[randomPostIndex];
 
     await Post.updateOne(
-      { _id: thoughtId },
+      { _id: PostId },
       { $push: { reactions: { reactionBody, username } } },
       { runValidators: true }
     );
