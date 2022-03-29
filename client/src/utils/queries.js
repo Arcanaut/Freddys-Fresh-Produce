@@ -1,9 +1,8 @@
-
 import { gql } from '@apollo/client';
 
 export const QUERY_POSTS = gql`
   query posts($username: String) {
-    thoughts(username: $username) {
+    posts(username: $username) {
       _id
       postText
       createdAt
@@ -20,7 +19,7 @@ export const QUERY_POSTS = gql`
 `;
 
 export const QUERY_POST = gql`
-  query thought($id: ID!) {
+  query post($id: ID!) {
     post(_id: $id) {
       _id
       postText
