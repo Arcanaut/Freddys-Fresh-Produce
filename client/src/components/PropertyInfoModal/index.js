@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 
-function ModalScrollingExample() {
+function scrollingModal() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -60,4 +60,4 @@ function ModalScrollingExample() {
   )
 }
 
-export default ModalScrollingExample
+export default scrollingModal
