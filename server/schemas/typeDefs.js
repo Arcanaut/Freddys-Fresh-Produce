@@ -1,10 +1,5 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
-const {
-  GraphQLUpload,
-  graphqlUploadExpress, // A Koa implementation is also exported.
-} = require('graphql-upload');
-const { finished } = require('stream/promises');
 
 //TODO: Change 'thoughts' to initialComment
 
@@ -55,8 +50,7 @@ const typeDefs = gql`
     addFriend(friendId: ID!): User
   }
 
-  type Mutation {
-    # Multiple uploads are supported. See graphql-upload docs for details.
-    singleUpload(file: Upload!): File!
-  }
+
 `;
+
+module.exports = { typeDefs };
