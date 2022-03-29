@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 
-import PostForm from '../components/PostForm';
+// import PostForm from '../components/PostForm';
 import PostList from '../components/PostList';
 
 import { useQuery } from '@apollo/client';
