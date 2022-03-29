@@ -6,6 +6,8 @@ const {
 } = require('graphql-upload');
 const { finished } = require('stream/promises');
 
+const {apolloUploadServer} = require ('apollo-upload-server')
+
 //TODO: Change 'thoughts' to initialComment
 
 const typeDefs = gql`
@@ -55,8 +57,4 @@ const typeDefs = gql`
     addFriend(friendId: ID!): User
   }
 
-  type Mutation {
-    # Multiple uploads are supported. See graphql-upload docs for details.
-    singleUpload(file: Upload!): File!
-  }
-`;
+  
