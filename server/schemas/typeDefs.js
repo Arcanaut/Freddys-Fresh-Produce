@@ -1,8 +1,6 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 
-const {apolloUploadServer} = require ('apollo-upload-server')
-
 //TODO: Change 'thoughts' to initialComment
 
 const typeDefs = gql`
