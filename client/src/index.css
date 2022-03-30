@@ -1,10 +1,10 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #3b5b81;
+  --secondary: #55837d;
+  --tertiary: #122769;
   --light: #fafafa;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --dark: #41899b;
+  --error: rgb(163, 71, 76);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', Monospace;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
