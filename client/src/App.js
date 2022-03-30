@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
 import PostList from './components/PostList';
+import SinglePost from './pages/SinglePost';
 
 
 import Login from './pages/Login';
@@ -55,9 +56,9 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/postlist" component={PostList} />
               <Route exact path="/profile/:username?" component={Profile} />
-              {/* <Route exact path="/post/:id" component={SinglePost} />
+              <Route exact path="/post/:id" component={SinglePost} />
 
-              <Route component={NoMatch} /> */}
+              {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
           <Footer />

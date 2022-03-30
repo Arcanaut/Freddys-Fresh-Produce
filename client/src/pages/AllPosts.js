@@ -1,6 +1,6 @@
 import React from 'react';
 import PostList from '../components/PostList';
-// import PostForm from '../components/PostForm';
+import PostForm from '../components/PostForm';
 
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
@@ -19,7 +19,7 @@ const Home = () => {
                 <div className="flex-row justify-space-between">
                     {loggedIn && (
                         <div className="col-12 mb-3">
-                            {/* <PostForm /> */}
+                            <PostForm />
                         </div>
                     )}
                     <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
