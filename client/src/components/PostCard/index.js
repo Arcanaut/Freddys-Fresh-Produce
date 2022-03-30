@@ -1,5 +1,6 @@
 import React from "react";
-import { Card } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react';
+import { Image } from "../sample-img.jpeg";
 
 
 const PostCard = ({post}) => {
@@ -10,11 +11,11 @@ const PostCard = ({post}) => {
     
         <Card>
         <Card.Content>
-          {/* <Image
+          <Image
             floated='right'
             size='mini'
-            src='/images/avatar/large/steve.jpg'
-          /> */}
+            src='../sample-img.jpeg'
+          />
           <Card.Header>{post.username}</Card.Header>
           <Card.Meta>{post.createdAt}</Card.Meta>
           <Card.Description>
@@ -23,16 +24,13 @@ const PostCard = ({post}) => {
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-            {/* <Button basic color='green'>
-              Approve
+            {/* <Button basic onclick={handlereaction} color='green'>
+              Add Reaction
             </Button>
-            <Button basic color='red'>
-              Decline
+            <Button basic onClick={deletePost} color='red'>
+              Delete Post
             </Button> */}
           </div>
-          {post.username}
-          {post.createdAt}
-          {post.postText}
         </Card.Content>
       </Card>
     )
