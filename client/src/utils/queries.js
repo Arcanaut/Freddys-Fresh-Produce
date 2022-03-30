@@ -1,70 +1,85 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_PRODUCTS = gql`
-  query getProducts($category: ID) {
-    products(category: $category) {
+export const QUERY_POSTS = gql`
+  query posts($username: String) {
+    posts(username: $username) {
       _id
-      name
-      description
-      price
-      quantity
-      image
-      category {
+      postText
+      createdAt
+      username
+      reactionCount
+      reactions {
         _id
+        createdAt
+        username
+        reactionBody
       }
     }
   }
 `;
 
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
-      session
-    }
-  }
-`;
-
-export const QUERY_ALL_PRODUCTS = gql`
-  {
-    products {
+export const QUERY_POST = gql`
+  query post($id: ID!) {
+    post(_id: $id) {
       _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
+      postText
+      createdAt
+      username
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
       }
-    }
-  }
-`;
-
-export const QUERY_CATEGORIES = gql`
-  {
-    categories {
-      _id
-      name
     }
   }
 `;
 
 export const QUERY_USER = gql`
-  {
-    user {
-      firstName
-      lastName
-      orders {
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      posts {
         _id
-        purchaseDate
-        products {
+        postText
+        createdAt
+        reactionCount
+      }
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      posts {
+        _id
+        postText
+        createdAt
+        reactionCount
+        reactions {
           _id
-          name
-          description
-          price
-          quantity
-          image
+          createdAt
+          reactionBody
+          username
         }
       }
+    }
+  }
+`;
+
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
     }
   }
 `;

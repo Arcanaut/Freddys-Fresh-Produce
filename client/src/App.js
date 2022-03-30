@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import './App.css';
+import { BrowserRouter as Router,Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,15 +9,17 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home';
-import Detail from './pages/Detail';
-import NoMatch from './pages/NoMatch';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import MainPage from './components/MainPage';
+import PostList from './components/PostList';
+import SinglePost from './pages/SinglePost';
+
+
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Nav from './components/Nav';
-import { StoreProvider } from './utils/GlobalState';
-import Success from './pages/Success';
-import OrderHistory from './pages/OrderHistory';
+import Profile from './pages/Profile';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,24 +40,29 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          <StoreProvider>
-            <Nav />
+        {/* <div className="flex-column justify-flex-start min-100-vh"> */}
+          <Header />
+          {/* <MainPage></MainPage> */}
+          {/* <ItemExampleLink></ItemExampleLink> */}
+          <div className="container">
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={MainPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              <Route exact path="/success" component={Success} />
-              <Route exact path="/orderHistory" component={OrderHistory} />
-              <Route exact path="/products/:id" component={Detail} />
-              <Route component={NoMatch} />
+              <Route exact path="/postlist" component={PostList} />
+              <Route exact path="/profile/:username?" component={Profile} />
+              <Route exact path="/post/:id" component={SinglePost} />
+
+              {/* <Route component={NoMatch} /> */}
             </Switch>
-          </StoreProvider>
-        </div>
+          </div>
+          <Footer />
+        {/* </div> */}
       </Router>
     </ApolloProvider>
   );
