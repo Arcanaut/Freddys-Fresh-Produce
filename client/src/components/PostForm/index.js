@@ -45,6 +45,7 @@ const PostForm = () => {
         event.preventDefault();
 
         try {
+            console.log(postText);
             await addPost({
                 variables: { postText },
             });
@@ -76,7 +77,7 @@ const PostForm = () => {
                     onChange={handleChange}
                 ></textarea>
 
-                <button className="btn col-12 col-md-3" type="submit">
+                <button onClick={handleFormSubmit} className="btn col-12 col-md-3" type="submit">
                     Submit
                 </button>
             </form>

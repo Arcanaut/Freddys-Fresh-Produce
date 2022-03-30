@@ -47,11 +47,11 @@ function App() {
       <Router>
         {/* <div className="flex-column justify-flex-start min-100-vh"> */}
           <Header />
-          <MainPage></MainPage>
+          {/* <MainPage></MainPage> */}
           {/* <ItemExampleLink></ItemExampleLink> */}
           <div className="container">
             <Switch>
-              {/* <Route exact path="/" component={Home} /> */}
+              <Route exact path="/" component={MainPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/postlist" component={PostList} />
