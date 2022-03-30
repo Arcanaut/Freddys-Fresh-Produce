@@ -1,6 +1,5 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
-import { Image } from "../sample-img.jpeg";
+import { Card, Image } from 'semantic-ui-react'
 
 
 const PostCard = ({post}) => {

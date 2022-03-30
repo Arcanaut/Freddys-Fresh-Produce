@@ -37,7 +37,7 @@ const Profile = (props) => {
   if (!user?.post) {
     return (
       <h4>
-        Let create your first post!
+        Let create your posts!
         <div className="col-12 mb-3 col-lg-8">
           <PostForm
             posts={user.posts}
