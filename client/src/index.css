@@ -1,10 +1,10 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #3b5b81;
+  --secondary: #abd3eb;
+  --tertiary: #122769;
   --light: #fafafa;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --dark: #41899b;
+  --error: rgb(163, 71, 76);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -15,7 +15,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 80%;
 }
 
 body {
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', Monospace;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -42,10 +42,14 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family:Arial, Helvetica, sans-serif ;
+
+
 }
 
 h3 {
@@ -81,26 +85,41 @@ a:hover {
 
 header {
   background: var(--primary);
+  height:100px;
+  justify-content: space-between;
+    flex-wrap: wrap;
+    background-size:cover;
+    min-width: 100%;
+    padding-bottom: 2%;
+    display: flex;
+    float: right;
+
 }
 
 header a {
   color: var(--light);
+
+  
 }
 
 button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
+  border-radius: 8px;
+    border: none;
   outline: none;
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
 }
 
 button:hover {
-  opacity: .8;
+  background-color: #008CBA;
+  color: white;
 }
 
 button[disabled] {
@@ -172,6 +191,7 @@ input:focus {
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
+  
 }
 
 .px-1 {
