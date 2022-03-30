@@ -31,7 +31,7 @@ db.once('open', async () => {
         'Enjoy the fresh, crisp, delicious flavor of Cucumber. Packed with nutritional benefits such as being naturally low in calories, carbohydrates, sodium, fat, and cholesterol, cucumbers also provide potassium, fiber, and vitamin C and clock in at a cool 16 calories per cup. Use this cucumber to make healthy treats such as a cucumber salad with tomatoes and onions in a vinaigrette dressing, toss with fresh mozzarella, tomatoes, and a drizzle of balsamic vinegar, mix diced cucumbers with Greek yogurt, lemon, dill, and garlic for a refreshing tzatziki sauce for gyros or veggies, add to a crisp, fresh veggie salad, or thinly slice and add to a vinegar brine for quick pickles. Any way you slice, dice, or spiralize them, Cucumber is a refreshing, healthy addition to any meal.',
       image: 'cucumber.jpeg',
       category: categories[0]._id,
-      price: 0.50,
+      price: 1.50,
       quantity: 243
     },
     {
@@ -40,7 +40,7 @@ db.once('open', async () => {
       description:
         'Green Onion Bunches are a versatile addition to your kitchen pantry. You can chop up the stalks into little rings and mix them into sour cream to create a delicious chip dip. Sprinkle these spring onions on salads and other dishes to give them just a hint of boldness. These vegetables have a crisp texture that gives a satisfying crunch. You can put them in almost any reciple, from salads to steak toppings and more.',
       image: 'green-onions.jpeg',
-      price: 0.48,
+      price: 1.48,
       quantity: 176
     },
     {
@@ -57,7 +57,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Neosporin + Pain Relief Cream provides dual antibiotic infection protection and soothes painful minor cuts, scrapes, and burns.',
-      image: 'neosporin.jepg',
+      image: 'neosporin.jpeg',
       price: 8.08,
       quantity: 59
     },
