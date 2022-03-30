@@ -94,6 +94,23 @@ header {
     display: flex;
     float: right;
 
+
+}
+
+footer{
+  background: var(--primary);
+  height: 43px;
+  color: var(--light);
+  text-align: center;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   font-size: 15px;
+
+
+
+
 }
 
 header a {
