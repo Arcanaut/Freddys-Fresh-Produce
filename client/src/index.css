@@ -1,17 +1,12 @@
 :root {
-  --primary: #4c73df;
-  --secondary: #74a3cf;
-  --tertiary: #b2c2c1;
-  --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
-  --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem;
-  --spacing-one: calc(1rem * 0.25);
-  --spacing-two: calc(1rem * 0.5);
-  --spacing-three: 1rem;
-  --spacing-four: calc(1rem * 1.5);
-  --spacing-five: calc(1rem * 3);
+  --primary: #3b5b81;
+  --secondary: #abd3eb;
+  --tertiary: #122769;
+  --light: #fafafa;
+  --dark: #41899b;
+  --error: rgb(163, 71, 76);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
 }
 
 * {
@@ -31,7 +26,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 80%;
 }
 
 body {
@@ -52,18 +47,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
+  font-family: 'Rubik', Monospace;
+  font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
 }
 
 h1 {
   font-size: 2.25rem;
+
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family:Arial, Helvetica, sans-serif ;
+
+
 }
 
 h3 {
@@ -96,15 +95,23 @@ a:visited {
   color: inherit;
 }
 
-nav {
-  width: 100%;
-  justify-content: center;
+header {
+  background: var(--primary);
+  height:100px;
+  justify-content: space-between;
+    flex-wrap: wrap;
+    background-size:cover;
+    min-width: 100%;
+    padding-bottom: 2%;
+    display: flex;
+    float: right;
+
 }
 
-nav a {
-  padding: 6px 10px;
-  margin: 0 15px;
-  transition: all 0.2s;
+header a {
+  color: var(--light);
+
+  
 }
 
 nav a:hover {
@@ -123,20 +130,19 @@ nav a:hover {
 .pill {
   font-size: 1.3rem;
   text-decoration: none;
-  padding: 0.5rem 1.2rem;
-  margin: 5px 0;
-  border-radius: var(--border-radius);
-  border: none;
-  color: var(--dark);
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
+    border: none;
   outline: none;
   background-color: var(--secondary);
-  transition: all 0.5s;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
 }
 
-.btn:hover,
-.pill:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+button:hover {
+  background-color: #008CBA;
+  color: white;
 }
 
 .btn:hover a,
@@ -502,6 +508,7 @@ nav a:hover {
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
+  
 }
 
 .my-3 {
