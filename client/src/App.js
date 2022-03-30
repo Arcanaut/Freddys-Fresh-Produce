@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,  } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,6 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
+import {FileUploader} from './components/FileUpload'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -39,9 +40,12 @@ function App() {
       <div className="flex-column justify-flex-start min-100-vh">
         <Header />
         <div className="container">
-          <Switch>
+          <>
           
-          </Switch>
+          </>
+        </div>
+        <div>
+        <FileUploader/>
         </div>
         <Footer />
       </div>
