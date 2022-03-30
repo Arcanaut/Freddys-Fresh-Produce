@@ -1,47 +1,59 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type Category {
+    _id: ID
+    name: String
+  }
+
+  type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
   type User {
     _id: ID
-    username: String
+    firstName: String
+    lastName: String
     email: String
-    posts: [Post]
+    orders: [Order]
   }
 
-  type Post {
-    _id: ID
-    postText: String
-    createdAt: String
-    username: String
-    reactionCount: Int
-    reactions: [Reaction]
-  }
-
-  type Reaction {
-    _id: ID
-    reactionBody: String
-    createdAt: String
-    username: String
+  type Checkout {
+    session: ID
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
   type Query {
-    me: User
-    users: [User]
-    user(username: String!): User
-    posts(username: String): [Post]
-    post(_id: ID!): Post
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    user: User
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-    addPost(postText: String!): Post
-    addReaction(postId: ID!, reactionBody: String!): Post
   }
 `;
 
