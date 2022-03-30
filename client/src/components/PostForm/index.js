@@ -8,6 +8,7 @@ import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
 const PostForm = () => {
     const [postText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
+    
 
     const [addPost, { error }] = useMutation(ADD_POST, {
         update(cache, { data: { addPost } }) {

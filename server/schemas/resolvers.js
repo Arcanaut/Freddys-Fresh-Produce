@@ -1,3 +1,4 @@
+const { ApolloServerPluginLandingPageDisabled } = require('apollo-server-core');
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Post } = require('../models');
 const { signToken } = require('../utils/auth');
@@ -57,6 +58,7 @@ const resolvers = {
       return { token, user };
     },
     addPost: async (parent, args, context) => {
+      console.log(ApolloServerPluginLandingPageDisabled)
       if (context.user) {
         const post = await Post.create({ ...args, username: context.user.username });
 
@@ -65,6 +67,8 @@ const resolvers = {
           { $push: { posts: post._id } },
           { new: true }
         );
+
+        console.log(post,"Add new post");
 
         return post;
       }

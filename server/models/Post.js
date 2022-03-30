@@ -4,6 +4,11 @@ const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema(
   {
+    id: {
+      type:Number,
+      primaryKey : true,
+      autonIcrement: true
+    },
     postText: {
       type: String,
       required: 'You need to have post information!',
