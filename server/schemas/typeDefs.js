@@ -37,6 +37,7 @@ const typeDefs = gql`
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(_id: ID!): Thought
+    files: [String]
   }
 
   type Mutation {
@@ -45,6 +46,7 @@ const typeDefs = gql`
     addThought(thoughtText: String!): Thought
     addReaction(thoughtId: ID!, reactionBody: String!): Thought
     addFriend(friendId: ID!): User
+    uploadFile(file: Upload!): Boolean
   }
 `;
 

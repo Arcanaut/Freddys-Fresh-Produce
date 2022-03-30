@@ -1,6 +1,10 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Thought } = require("../models");
 const { signToken } = require("../utils/auth");
+const { createWriteStream, existsSync, mkdirSync } = require("fs");
+const path = require("path");
+const express = require("express");
+
 
 const resolvers = {
   Query: {
@@ -34,6 +38,10 @@ const resolvers = {
     },
     thought: async (parent, { _id }) => {
       return Thought.findOne({ _id });
+    },
+
+    files: {
+      files: () => files
     },
   },
 
@@ -108,7 +116,24 @@ const resolvers = {
 
       throw new AuthenticationError("You need to be logged in!");
     },
+
+    uploadFile: async (_, { file }) => {
+      const { createReadStream, filename } = await file;
+
+      await new Promise(res =>
+        createReadStream()
+          .pipe(createWriteStream(path.join(__dirname, "../images", filename)))
+          .on("close", res)
+      );
+
+      files.push(filename);
+
+      return true;
+    }
   },
 };
+
+//TODO: possibly replace __dirname with `http://localhost:${PORT}${server.graphqlPath}/images/${x}`
+existsSync(path.join(__dirname, "../images")) || mkdirSync(path.join(__dirname, "../images"));
 
 module.exports = resolvers;

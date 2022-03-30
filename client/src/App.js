@@ -11,6 +11,8 @@ import { setContext } from '@apollo/client/link/context';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Upload from './components/Upload';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -40,7 +42,7 @@ function App() {
         <Header />
         <div className="container">
           <Switch>
-          
+          <Upload />
           </Switch>
         </div>
         <Footer />
