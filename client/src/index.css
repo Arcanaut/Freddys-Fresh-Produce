@@ -1,13 +1,7 @@
 :root {
-<<<<<<< HEAD
-  --primary: #3b5b81;
-  --secondary: #abd3eb;
-  --tertiary: #122769;
-=======
   --primary: #232f3e;
   --secondary: #f3a847;
   --tertiary: #b12704;
->>>>>>> origin/shop/travis
   --light: #fafafa;
   --dark: #41899b;
   --error: rgb(163, 71, 76);
@@ -40,11 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
-  font-family: 'Rubik', Monospace;
-=======
   font-family: "Rubik", sans-serif;
->>>>>>> origin/shop/travis
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -116,13 +106,8 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-<<<<<<< HEAD
-  border-radius: 8px;
-    border: none;
-=======
   border-radius: 0.5rem;
   border: none;
->>>>>>> origin/shop/travis
   outline: none;
   cursor: pointer;
   margin: 0 1px;
@@ -133,12 +118,7 @@ button {
 }
 
 button:hover {
-<<<<<<< HEAD
-  background-color: #008CBA;
-  color: white;
-=======
   opacity: 0.8;
->>>>>>> origin/shop/travis
 }
 
 button[disabled] {
