@@ -3,7 +3,7 @@ import React from 'react';
 
 const MainPage = () => {
   return (
-    <body className='main-page'>
+    <div className='main-page'>
       <h1> Let's explore the world with us </h1>
       <h2>
         Please log-in first
@@ -12,7 +12,7 @@ const MainPage = () => {
         </nav>
 
       </h2>
-    </body>
+    </div>
   );
 };
 

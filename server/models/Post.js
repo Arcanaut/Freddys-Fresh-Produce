@@ -4,16 +4,16 @@ const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema(
   {
-    id: {
-      type:Number,
-      primaryKey : true,
-      autonIcrement: true
-    },
+    // id: {
+    //   type: INTEGER,
+    //   primaryKey : true,
+    //   autonIcrement: true
+    // },
     postText: {
       type: String,
       required: 'You need to have post information!',
       minlength: 1,
-      maxlength: 280
+      maxlength: 300
     },
     createdAt: {
       type: Date,
