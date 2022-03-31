@@ -1,7 +1,7 @@
 :root {
-  --primary: #232f3e;
-  --secondary: #f3a847;
-  --tertiary: #b12704;
+  --primary: #3b5b81;
+  --secondary: #abd3eb;
+  --tertiary: #122769;
   --light: #fafafa;
   --dark: #41899b;
   --error: rgb(163, 71, 76);
@@ -21,11 +21,14 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  color: black;
+  background-image: url(https://geweb.azureedge.net/-/media/Images/Giant-Eagle/shop/Produce/produce-hero-image.ashx);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
@@ -34,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', Monospace;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -48,6 +51,8 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-family:Arial, Helvetica, sans-serif ;
+  font-weight: 200;
+  color: black;
 
 
 }
@@ -74,9 +79,9 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 a:hover {
@@ -84,7 +89,8 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  opacity: 75%;
+  background-blend-mode: color-burn);
   height:100px;
   justify-content: space-between;
     flex-wrap: wrap;
@@ -94,40 +100,65 @@ header {
     display: flex;
     float: right;
 
+
+}
+
+footer{
+  background: black;
+  opacity: 90%;
+  height: 43px;
+  color: var(--light);
+  text-align: center;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   font-size: 15px;
+
+
+
+
 }
 
 header a {
-  color: var(--light);
-
-  
+  color: var(black);
+  font-weight: 900;
+  font-size: larger;
+  margin: 1.5em;
 }
 
 button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
+  border-radius: 8px;
+    border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 10px;
   background-color: var(--secondary);
   background-color: white; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: 2px solid black;
+  box-shadow: 5px 5px 8px black;
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #008CBA;
+  color: white;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: 0.8;
+  opacity: .8;
 }
 
 img {
   max-width: 100%;
+  opacity: 80%;
+  border-radius: 0px 16px 16px 16px;
 }
 
 span[role="img"] {
@@ -136,6 +167,7 @@ span[role="img"] {
 
 form {
   width: 40%;
+  color: black;
 }
 
 input {
@@ -149,7 +181,7 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
 .container {
@@ -216,6 +248,10 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  border-radius: 16px;
+  border: 4px solid black;
+  margin: 2em;
+  box-shadow: 10px 10px 20px black;
 }
 
 .error-text {
