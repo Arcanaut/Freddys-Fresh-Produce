@@ -88,7 +88,8 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
+/*TODO: Delete header CSS*/
+/* header {
   opacity: 75%;
   background-blend-mode: color-burn);
   height:100px;
@@ -99,9 +100,8 @@ header {
     padding-bottom: 2%;
     display: flex;
     float: right;
+} */
 
-
-}
 
 footer{
   background: black;
