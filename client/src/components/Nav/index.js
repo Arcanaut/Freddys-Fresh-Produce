@@ -16,9 +16,11 @@ function Nav() {
             
             
           <li className="mx-1">
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
+            <Menu.Item as={ NavLink }
+            exact to="/" onClick={() =>Auth.logout()}>Logout
+            </Menu.Item>
+              
+            
           </li>
           </Menu>
         </ul>
@@ -54,7 +56,7 @@ function Nav() {
           <span role="img" aria-label="shopping bag">
             🚜
           </span>
-          Fresh Freddy's Produce
+          Freddy's Fresh Produce
         </Link>
       </h1>
 
