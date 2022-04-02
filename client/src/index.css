@@ -152,7 +152,7 @@ button:hover {
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 100%;
 }
 
 img {
