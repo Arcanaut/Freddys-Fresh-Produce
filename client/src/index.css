@@ -51,8 +51,6 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-family:Arial, Helvetica, sans-serif ;
-  font-weight: 200;
-  color: black;
 
 
 }
@@ -88,24 +86,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/*TODO: Delete header CSS*/
- header {
-  opacity: 75%;
-  background-blend-mode: (color-burn);
+header {
+  background: var(--primary);
   height:100px;
-  justify-content: space-between;
-    flex-wrap: wrap;
-    background-size:cover;
-    min-width: 100%;
-    padding-bottom: 2%;
-    display: flex;
-    float: right;
-} 
+  
 
+
+}
 
 footer{
-  background: black;
-  opacity: 90%;
+  background: var(--primary);
   height: 43px;
   color: var(--light);
   text-align: center;
@@ -121,10 +111,9 @@ footer{
 }
 
 header a {
-  color: var(black);
-  font-weight: 900;
-  font-size: larger;
-  margin: 1.5em;
+  color: var(--light);
+
+  
 }
 
 button {
@@ -141,8 +130,7 @@ button {
   background-color: var(--secondary);
   background-color: white; 
   color: black; 
-  border: 2px solid black;
-  box-shadow: 5px 5px 8px black;
+  border: 2px solid #008CBA;
 }
 
 button:hover {
