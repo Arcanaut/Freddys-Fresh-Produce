@@ -89,9 +89,9 @@ a:hover {
 }
 
 /*TODO: Delete header CSS*/
-/* header {
+ header {
   opacity: 75%;
-  background-blend-mode: color-burn);
+  background-blend-mode: (color-burn);
   height:100px;
   justify-content: space-between;
     flex-wrap: wrap;
@@ -100,7 +100,7 @@ a:hover {
     padding-bottom: 2%;
     display: flex;
     float: right;
-} */
+} 
 
 
 footer{
