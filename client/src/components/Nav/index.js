@@ -27,13 +27,13 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row" id="navigation">
           <Menu>
             <Menu.Item as={ NavLink } 
             exact to="/signup">
               Sign Up
             </Menu.Item>
-
+      <br/>
               <Menu.Item as={ NavLink }
               exact to="/login">
             Login
