@@ -90,10 +90,10 @@ a:hover {
 header {
   opacity: 100%;
   background-blend-mode: color-burn);
-  height:100px;
+  height: 100px;
   justify-content: space-between;
-    flex-wrap: wrap;
-    background-size:cover;
+  flex-wrap: wrap;
+  background-size:cover;
     min-width: 100%;
     padding-bottom: 2%;
     display: flex;
