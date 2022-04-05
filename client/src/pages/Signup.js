@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import { Form, Button } from 'semantic-ui-react'
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -33,53 +34,63 @@ function Signup(props) {
   return (
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
-
+      
       <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+      <Form onSubmit={handleFormSubmit}>
+
+        <Form.Group>
           <label htmlFor="firstName">First Name:</label>
-          <input
+          <Form.Input width={6}
             placeholder="First"
             name="firstName"
             type="firstName"
             id="firstName"
             onChange={handleChange}
           />
-        </div>
+          </Form.Group>
+        
         <div className="flex-row space-between my-2">
+        <Form.Group>
           <label htmlFor="lastName">Last Name:</label>
-          <input
+          <Form.Input width={6}
             placeholder="Last"
             name="lastName"
             type="lastName"
             id="lastName"
             onChange={handleChange}
           />
+          </Form.Group>
         </div>
+
         <div className="flex-row space-between my-2">
+          <Form.Group>
           <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
+          <Form.Input width={6}
+            placeholder="fakeEmail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
+          </Form.Group>
         </div>
         <div className="flex-row space-between my-2">
+        <Form.Group>
           <label htmlFor="pwd">Password:</label>
-          <input
+          <Form.Input width={6}
             placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
           />
+          <Button fluid type="submit">Submit</Button>
+          </Form.Group>
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          
         </div>
-      </form>
+      </Form>
     </div>
   );
 }

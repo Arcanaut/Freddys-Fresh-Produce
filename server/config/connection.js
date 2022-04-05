@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://shelby9988:12345@cluster0.pfeyz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://localhost/freddys'
 
 , {
   useNewUrlParser: true,
