@@ -27,6 +27,11 @@
 * [Repo](https://github.com/Arcanaut/Freddys-Fresh-Produce)
 * [Deploy](https://freddy-fress.herokuapp.com/)
 
+### Screenshot
+  ![Screenshot](https://github.com/Arcanaut/Freddys-Fresh-Produce/blob/main/client/public/images/freddyfress.png)
+  
+
+
 
   
  
